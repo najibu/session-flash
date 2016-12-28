@@ -9,9 +9,9 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-
+        
+        <link rel="stylesheet" href="/css/app.css">
+        
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -27,9 +27,7 @@
             @endif
 
             <div class="content">
-                @if (Session::has('flash_message'))
-                    <div class="Alert">{{ Session::get('flash_message') }}</div>
-                @endif
+                @include('flash')
                 <h1>
                     Laravel
                 </h1>

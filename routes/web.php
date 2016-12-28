@@ -12,9 +12,7 @@
 */
 Route::group(['middleware' => ['web']], function () {
   Route::get('begin', function (){
-    session()->flash('flash_message', 'Here is my status');
-
-    // Session::flash('status', 'Hello there.');
+    flash('You are logged in.', 'info');
     return Redirect::to('/');
   });
   Route::get('/', function () {
